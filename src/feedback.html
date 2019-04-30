@@ -1,0 +1,1155 @@
+<html>
+    <link rel="stylesheet"
+    href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="feedback.css">
+    <div class="image">
+  <div>
+    <form name="myForm" method='post' action='insert'>
+      <h2><b><p id="date" style="color:white;font-size:20px;"></p></h2>
+      <h2 class="gg1"><u>Customer feedback form</u></h2>
+      <br>
+      <p style="color:white;font-size:20px;">How Are We Doing?<br>
+        We hope you enjoyed your stay with us! To help us better serve you, please complete this survey and return it to the reception desk at your convenience. Thank you!
+         </p>
+
+      <button class="collapsible">Personal Details</button> 
+      <div class="content"> 
+      <label for="name" class="gg" ><b>Full Name:</b></label>
+      <input type="text" 
+       name="name"
+       style="width:25%;margin: 30px;"
+       text-align= "center"
+       id="name"
+	   onchange="namevalidate()"
+      >
+
+      <label for="address" class="gg" style="margin:30px;" ><h3><b>Address:</b></h3></label>
+      <input type="text"
+       name="add" 
+       style="width:25%;margin: 30px;"
+       text-align= "center"
+       id="add"
+	   onchange="addressvalidate()"
+      >
+
+      <label for="ph" class="gg" ><h3><b>Phone Number:</b></h3></label>
+      <input type="text" 
+       class="ccc"
+       style="width:25%;margin: 30px;"
+       text-align= "center"
+       name="ph"
+       id="ph"
+	   onchange="mobileevalidate()"
+      >
+	  <span id="message"></span>
+
+      <label for="email" class="gg"><h3><b>Email:</b></h3></label>
+      <input type="email" 
+       class="ccc"
+       style="width:25%;margin: 30px;"
+       text-align= "center"
+       name="email"
+       id="email"
+	   onchange="emailvalidate()"
+      >
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      </div>
+      <br>
+      <br>
+      <button class="collapsible">Check In Process</button> 
+      <div class="content1">  
+      <p style="color:white;margin:30px;font-size:20px;">1)  &nbsp;&nbsp;My overall experience here was good, and I would recommend this hotel to my friends.</p>
+      <input style="margin-left: 30px;"class="form-check-input" type="radio" name="q1" id="op11" value="op11" [(ngModel)]="op11" onclick="event1(true,false,false,false,false)" >
+      <label style="color:white;"for="op11"><b>Strongly Agree</b></label>
+      <input  class="form-check-input" type="radio" name="q1" id="op12" value="op12" [(ngModel)]="op12" onclick="event1(false,true,false,false,false)" >
+      <label style="color:white;"for="op12"><b>Agree</b></label>
+      <input class="form-check-input" type="radio" name="q1" id="op13" value="op13" [(ngModel)]="op13" onclick="event1(false,false,true,false,false)" checked="checked">
+      <label style="color:white;"for="op13"><b>Neutral</b></label>
+      <input class="form-check-input" type="radio" name="q1" id="op14" value="op14" [(ngModel)]="op14" onclick="event1(false,false,false,true,false)" >
+      <label style="color:white;"for="op14"><b>Disagree</b></label>
+      <input class="form-check-input" type="radio" name="q1" id="op15" value="op15" [(ngModel)]="op15" onclick="event1(false,false,false,false,true)" >
+      <label style="color:white;"for="op15"><b>Strongly Disagree</b></label><br>
+      <br>
+      
+      <p style="color:white;margin:30px;font-size:20px;">2)  &nbsp;&nbsp;My reservation record was accurate.</p>
+      <input style="margin-left: 30px;"class="form-check-input" type="radio" name="q2" id="op21" value="op21" [(ngModel)]="op11" onclick="event2(true,false,false,false,false)" >
+      <label style="color:white;"for="op11"><b>Strongly Agree</b></label>
+      <input  class="form-check-input" type="radio" name="q2" id="op22" value="op22" [(ngModel)]="op12" onclick="event2(false,true,false,false,false)" >
+      <label style="color:white;"for="op12"><b>Agree</b></label>
+      <input class="form-check-input" type="radio" name="q2" id="op23" value="op23" [(ngModel)]="op13" onclick="event2(false,false,true,false,false)" checked="checked">
+      <label style="color:white;"for="op13"><b>Neutral</b></label>
+      <input class="form-check-input" type="radio" name="q2" id="op24" value="op24" [(ngModel)]="op14" onclick="event2(false,false,false,true,false)" >
+      <label style="color:white;"for="op14"><b>Disagree</b></label>
+      <input class="form-check-input" type="radio" name="q2" id="op25" value="op25" [(ngModel)]="op15" onclick="event2(false,false,false,false,true)" >
+      <label style="color:white;"for="op15"><b>Strongly Disagree</b></label><br>
+      <br>
+
+      <p style="color:white;margin:30px;font-size:20px;">3)  &nbsp;&nbsp;The check-in process was timely and efficient.</p>
+      <input style="margin-left: 30px;"class="form-check-input" type="radio" name="q3" id="op31" value="op31" [(ngModel)]="op11" onclick="event3(true,false,false,false,false)" >
+      <label style="color:white;"for="op11"><b>Strongly Agree</b></label>
+      <input  class="form-check-input" type="radio" name="q3" id="op32" value="op32" [(ngModel)]="op12" onclick="event3(false,true,false,false,false)" >
+      <label style="color:white;"for="op12"><b>Agree</b></label>
+      <input class="form-check-input" type="radio" name="q3" id="op33" value="op33" [(ngModel)]="op13" onclick="event3(false,false,true,false,false)" checked="checked">
+      <label style="color:white;"for="op13"><b>Neutral</b></label>
+      <input class="form-check-input" type="radio" name="q3" id="op34" value="op34" [(ngModel)]="op14" onclick="event3(false,false,false,true,false)" >
+      <label style="color:white;"for="op14"><b>Disagree</b></label>
+      <input class="form-check-input" type="radio" name="q3" id="op35" value="op35" [(ngModel)]="op15" onclick="event3(false,false,false,false,true)" >
+      <label style="color:white;"for="op15"><b>Strongly Disagree</b></label><br>
+      <br>
+
+      <p style="color:white;margin:30px;font-size:20px;">4)  &nbsp;&nbsp;The check-in staff was courteous.</p>
+      <input style="margin-left: 30px;"class="form-check-input" type="radio" name="q4" id="op41" value="op41" [(ngModel)]="op11" onclick="event4(true,false,false,false,false)" >
+      <label style="color:white;"for="op11"><b>Strongly Agree</b></label>
+      <input  class="form-check-input" type="radio" name="q4" id="op42" value="op42" [(ngModel)]="op12" onclick="event4(false,true,false,false,false)" >
+      <label style="color:white;"for="op12"><b>Agree</b></label>
+      <input class="form-check-input" type="radio" name="q4" id="op43" value="op43" [(ngModel)]="op13" onclick="event4(false,false,true,false,false)" checked="checked">
+      <label style="color:white;"for="op13"><b>Neutral</b></label>
+      <input class="form-check-input" type="radio" name="q4" id="op44" value="op44" [(ngModel)]="op14" onclick="event4(false,false,false,true,false)" >
+      <label style="color:white;"for="op14"><b>Disagree</b></label>
+      <input class="form-check-input" type="radio" name="q4" id="op45" value="op45" [(ngModel)]="op15" onclick="event4(false,false,false,false,true)" >
+      <label style="color:white;"for="op15"><b>Strongly Disagree</b></label><br>
+      <br>
+      </div>
+      <br>
+      <br>
+
+      <button class="collapsible">Accomodation</button> 
+      <div class="content2"> 
+      <p style="color:white;margin:30px;font-size:20px;">5)  &nbsp;&nbsp;My room was clean and comfortable.</p>
+      <input style="margin-left: 30px;"class="form-check-input" type="radio" name="q5" id="op51" value="op51" [(ngModel)]="op11" onclick="event5(true,false,false,false,false)" >
+      <label style="color:white;"for="op11"><b>Strongly Agree</b></label>
+      <input  class="form-check-input" type="radio" name="q5" id="op52" value="op52" [(ngModel)]="op12" onclick="event5(false,true,false,false,false)" >
+      <label style="color:white;"for="op12"><b>Agree</b></label>
+      <input class="form-check-input" type="radio" name="q5" id="op53" value="op53" [(ngModel)]="op13" onclick="event5(false,false,true,false,false)" checked="checked">
+      <label style="color:white;"for="op13"><b>Neutral</b></label>
+      <input class="form-check-input" type="radio" name="q5" id="op54" value="op54" [(ngModel)]="op14" onclick="event5(false,false,false,true,false)" >
+      <label style="color:white;"for="op14"><b>Disagree</b></label>
+      <input class="form-check-input" type="radio" name="q5" id="op55" value="op55" [(ngModel)]="op15" onclick="event5(false,false,false,false,true)" >
+      <label style="color:white;"for="op15"><b>Strongly Disagree</b></label><br>
+      <br>
+
+      <p style="color:white;margin:30px;font-size:20px;">6)  &nbsp;&nbsp;My room was furnished appropriately.</p>
+      <input style="margin-left: 30px;"class="form-check-input" type="radio" name="q6" id="op61" value="op61" [(ngModel)]="op11" onclick="event6(true,false,false,false,false)" >
+      <label style="color:white;"for="op11"><b>Strongly Agree</b></label>
+      <input  class="form-check-input" type="radio" name="q6" id="op62" value="op62" [(ngModel)]="op12" onclick="event6(false,true,false,false,false)" >
+      <label style="color:white;"for="op12"><b>Agree</b></label>
+      <input class="form-check-input" type="radio" name="q6" id="op63" value="op63" [(ngModel)]="op13" onclick="event6(false,false,true,false,false)" checked="checked">
+      <label style="color:white;"for="op13"><b>Neutral</b></label>
+      <input class="form-check-input" type="radio" name="q6" id="op64" value="op64" [(ngModel)]="op14" onclick="event6(false,false,false,true,false)" >
+      <label style="color:white;"for="op14"><b>Disagree</b></label>
+      <input class="form-check-input" type="radio" name="q6" id="op65" value="op65" [(ngModel)]="op15" onclick="event6(false,false,false,false,true)" >
+      <label style="color:white;"for="op15"><b>Strongly Disagree</b></label><br>
+      <br>
+
+      <p style="color:white;margin:30px;font-size:20px;">7)  &nbsp;&nbsp;My bed and bedding were comfortable.</p>
+      <input style="margin-left: 30px;"class="form-check-input" type="radio" name="q7" id="op71" value="op71" [(ngModel)]="op11" onclick="event7(true,false,false,false,false)" >
+      <label style="color:white;"for="op11"><b>Strongly Agree</b></label>
+      <input  class="form-check-input" type="radio" name="q7" id="op72" value="op72" [(ngModel)]="op12" onclick="event7(false,true,false,false,false)" >
+      <label style="color:white;"for="op12"><b>Agree</b></label>
+      <input class="form-check-input" type="radio" name="q7" id="op73" value="op73" [(ngModel)]="op13" onclick="event7(false,false,true,false,false)" checked="checked">
+      <label style="color:white;"for="op13"><b>Neutral</b></label>
+      <input class="form-check-input" type="radio" name="q7" id="op74" value="op74" [(ngModel)]="op14" onclick="event7(false,false,false,true,false)" >
+      <label style="color:white;"for="op14"><b>Disagree</b></label>
+      <input class="form-check-input" type="radio" name="q7" id="op75" value="op75" [(ngModel)]="op15" onclick="event7(false,false,false,false,true)" >
+      <label style="color:white;"for="op15"><b>Strongly Disagree</b></label><br>
+      <br>
+
+      <p style="color:white;margin:30px;font-size:20px;">8)  &nbsp;&nbsp;The guest staff was prompt, reliable, and friendly.</p>
+      <input style="margin-left: 30px;"class="form-check-input" type="radio" name="q8" id="op81" value="op81" [(ngModel)]="op11" onclick="event8(true,false,false,false,false)" >
+      <label style="color:white;"for="op11"><b>Strongly Agree</b></label>
+      <input  class="form-check-input" type="radio" name="q8" id="op82" value="op82" [(ngModel)]="op12" onclick="event8(false,true,false,false,false)" >
+      <label style="color:white;"for="op12"><b>Agree</b></label>
+      <input class="form-check-input" type="radio" name="q8" id="op83" value="op83" [(ngModel)]="op13" onclick="event8(false,false,true,false,false)" checked="checked">
+      <label style="color:white;"for="op13"><b>Neutral</b></label>
+      <input class="form-check-input" type="radio" name="q8" id="op84" value="op84" [(ngModel)]="op14" onclick="event8(false,false,false,true,false)" >
+      <label style="color:white;"for="op14"><b>Disagree</b></label>
+      <input class="form-check-input" type="radio" name="q8" id="op85" value="op85" [(ngModel)]="op15" onclick="event8(false,false,false,false,true)" >
+      <label style="color:white;"for="op15"><b>Strongly Disagree</b></label><br>
+      <br>
+
+      <p style="color:white;margin:30px;font-size:20px;">9)  &nbsp;&nbsp;The guest staff was knowledgeable and fully answered my questions about the area.</p>
+      <input style="margin-left: 30px;"class="form-check-input" type="radio" name="q9" id="op91" value="op91" [(ngModel)]="op11" onclick="event9(true,false,false,false,false)" >
+      <label style="color:white;"for="op11"><b>Strongly Agree</b></label>
+      <input  class="form-check-input" type="radio" name="q9" id="op92" value="op92" [(ngModel)]="op12" onclick="event9(false,true,false,false,false)" >
+      <label style="color:white;"for="op12"><b>Agree</b></label>
+      <input class="form-check-input" type="radio" name="q9" id="op93" value="op93" [(ngModel)]="op13" onclick="event9(false,false,true,false,false)" checked="checked">
+      <label style="color:white;"for="op13"><b>Neutral</b></label>
+      <input class="form-check-input" type="radio" name="q9" id="op94" value="op94" [(ngModel)]="op14" onclick="event9(false,false,false,true,false)" >
+      <label style="color:white;"for="op14"><b>Disagree</b></label>
+      <input class="form-check-input" type="radio" name="q9" id="op95" value="op95" [(ngModel)]="op15" onclick="event9(false,false,false,false,true)" >
+      <label style="color:white;"for="op15"><b>Strongly Disagree</b></label><br>
+      <br>
+      </div>
+      <br>
+      <br>
+
+      <button class="collapsible">Services:Staff, Food and Room</button> 
+      <div class="content3"> 
+      <p style="color:white;margin:30px;font-size:20px;">10)  &nbsp;&nbsp;Security was available if needed.</p>
+      <input style="margin-left: 30px;"class="form-check-input" type="radio" name="q10" id="op101" value="op101" [(ngModel)]="op11" onclick="event10(true,false,false,false,false)" >
+      <label style="color:white;"for="op11"><b>Strongly Agree</b></label>
+      <input  class="form-check-input" type="radio" name="q10" id="op102" value="op102" [(ngModel)]="op12" onclick="event10(false,true,false,false,false)" >
+      <label style="color:white;"for="op12"><b>Agree</b></label>
+      <input class="form-check-input" type="radio" name="q10" id="op103" value="op103" [(ngModel)]="op13" onclick="event10(false,false,true,false,false)" checked="checked">
+      <label style="color:white;"for="op13"><b>Neutral</b></label>
+      <input class="form-check-input" type="radio" name="q10" id="op104" value="op104" [(ngModel)]="op14" onclick="event10(false,false,false,true,false)" >
+      <label style="color:white;"for="op14"><b>Disagree</b></label>
+      <input class="form-check-input" type="radio" name="q10" id="op105" value="op105" [(ngModel)]="op15" onclick="event10(false,false,false,false,true)" >
+      <label style="color:white;"for="op15"><b>Strongly Disagree</b></label><br>
+      <br>
+
+      <p style="color:white;margin:30px;font-size:20px;">11)  &nbsp;&nbsp;Housekeeping staff was friendly and reliable.</p>
+      <input style="margin-left: 30px;"class="form-check-input" type="radio" name="q11" id="op111" value="op111" [(ngModel)]="op11" onclick="event11(true,false,false,false,false)" >
+      <label style="color:white;"for="op11"><b>Strongly Agree</b></label>
+      <input  class="form-check-input" type="radio" name="q11" id="op112" value="op112" [(ngModel)]="op12" onclick="event11(false,true,false,false,false)" >
+      <label style="color:white;"for="op12"><b>Agree</b></label>
+      <input class="form-check-input" type="radio" name="q11" id="op113" value="op113" [(ngModel)]="op13" onclick="event11(false,false,true,false,false)" checked="checked">
+      <label style="color:white;"for="op13"><b>Neutral</b></label>
+      <input class="form-check-input" type="radio" name="q11" id="op114" value="op114" [(ngModel)]="op14" onclick="event11(false,false,false,true,false)" >
+      <label style="color:white;"for="op14"><b>Disagree</b></label>
+      <input class="form-check-input" type="radio" name="q11" id="op115" value="op115" [(ngModel)]="op15" onclick="event11(false,false,false,false,true)" >
+      <label style="color:white;"for="op15"><b>Strongly Disagree</b></label><br>
+      <br>
+
+      <p style="color:white;margin:30px;font-size:20px;">12)  &nbsp;&nbsp;Management was available to solve problems.</p>
+      <input style="margin-left: 30px;"class="form-check-input" type="radio" name="q12" id="op121" value="op121" [(ngModel)]="op11" onclick="event12(true,false,false,false,false)" >
+      <label style="color:white;"for="op11"><b>Strongly Agree</b></label>
+      <input  class="form-check-input" type="radio" name="q12" id="op122" value="op122" [(ngModel)]="op12" onclick="event12(false,true,false,false,false)" >
+      <label style="color:white;"for="op12"><b>Agree</b></label>
+      <input class="form-check-input" type="radio" name="q12" id="op123" value="op123" [(ngModel)]="op13" onclick="event12(false,false,true,false,false)" checked="checked">
+      <label style="color:white;"for="op13"><b>Neutral</b></label>
+      <input class="form-check-input" type="radio" name="q12" id="op124" value="op124" [(ngModel)]="op14" onclick="event12(false,false,false,true,false)" >
+      <label style="color:white;"for="op14"><b>Disagree</b></label>
+      <input class="form-check-input" type="radio" name="q12" id="op125" value="op125" [(ngModel)]="op15" onclick="event12(false,false,false,false,true)" >
+      <label style="color:white;"for="op15"><b>Strongly Disagree</b></label><br>
+      <br>
+
+      <p style="color:white;margin:30px;font-size:20px;">13)  &nbsp;&nbsp;The food and dining staff was courteous.</p>
+      <input style="margin-left: 30px;"class="form-check-input" type="radio" name="q13" id="op131" value="op131" [(ngModel)]="op11" onclick="event13(true,false,false,false,false)" >
+      <label style="color:white;"for="op11"><b>Strongly Agree</b></label>
+      <input  class="form-check-input" type="radio" name="q13" id="op132" value="op132" [(ngModel)]="op12" onclick="event13(false,true,false,false,false)" >
+      <label style="color:white;"for="op12"><b>Agree</b></label>
+      <input class="form-check-input" type="radio" name="q13" id="op133" value="op133" [(ngModel)]="op13" onclick="event13(false,false,true,false,false)" checked="checked">
+      <label style="color:white;"for="op13"><b>Neutral</b></label>
+      <input class="form-check-input" type="radio" name="q13" id="op134" value="op134" [(ngModel)]="op14" onclick="event13(false,false,false,true,false)" >
+      <label style="color:white;"for="op14"><b>Disagree</b></label>
+      <input class="form-check-input" type="radio" name="q13" id="op135" value="op135" [(ngModel)]="op15" onclick="event13(false,false,false,false,true)" >
+      <label style="color:white;"for="op15"><b>Strongly Disagree</b></label><br>
+      <br>
+
+      <p style="color:white;margin:30px;font-size:20px;">14)  &nbsp;&nbsp;The food quality was good.</p>
+      <input style="margin-left: 30px;"class="form-check-input" type="radio" name="q14" id="op141" value="op141" [(ngModel)]="op11" onclick="event14(true,false,false,false,false)" >
+      <label style="color:white;"for="op11"><b>Strongly Agree</b></label>
+      <input  class="form-check-input" type="radio" name="q14" id="op142" value="op142" [(ngModel)]="op12" onclick="event14(false,true,false,false,false)" >
+      <label style="color:white;"for="op12"><b>Agree</b></label>
+      <input class="form-check-input" type="radio" name="q14" id="op143" value="op143" [(ngModel)]="op13" onclick="event14(false,false,true,false,false)" checked="checked">
+      <label style="color:white;"for="op13"><b>Neutral</b></label>
+      <input class="form-check-input" type="radio" name="q14" id="op144" value="op144" [(ngModel)]="op14" onclick="event14(false,false,false,true,false)" >
+      <label style="color:white;"for="op14"><b>Disagree</b></label>
+      <input class="form-check-input" type="radio" name="q14" id="op145" value="op145" [(ngModel)]="op15" onclick="event14(false,false,false,false,true)" >
+      <label style="color:white;"for="op15"><b>Strongly Disagree</b></label><br>
+      <br>
+
+      <p style="color:white;margin:30px;font-size:20px;">15)  &nbsp;&nbsp;Room service was timely and efficient.</p>
+      <input style="margin-left: 30px;"class="form-check-input" type="radio" name="q15" id="op151" value="op151" [(ngModel)]="op11" onclick="event15(true,false,false,false,false)" >
+      <label style="color:white;"for="op11"><b>Strongly Agree</b></label>
+      <input  class="form-check-input" type="radio" name="q15" id="op152" value="op152" [(ngModel)]="op12" onclick="event15(false,true,false,false,false)" >
+      <label style="color:white;"for="op12"><b>Agree</b></label>
+      <input class="form-check-input" type="radio" name="q15" id="op153" value="op153" [(ngModel)]="op13" onclick="event15(false,false,true,false,false)" checked="checked">
+      <label style="color:white;"for="op13"><b>Neutral</b></label>
+      <input class="form-check-input" type="radio" name="q15" id="op154" value="op154" [(ngModel)]="op14" onclick="event15(false,false,false,true,false)" >
+      <label style="color:white;"for="op14"><b>Disagree</b></label>
+      <input class="form-check-input" type="radio" name="q15" id="op155" value="op155" [(ngModel)]="op15" onclick="event15(false,false,false,false,true)" >
+      <label style="color:white;"for="op15"><b>Strongly Disagree</b></label><br>
+      <br>
+
+      <p style="color:white;margin:30px;font-size:20px;">16)  &nbsp;&nbsp;Room service delivered the correct food order.</p>
+      <input style="margin-left: 30px;"class="form-check-input" type="radio" name="q16" id="op161" value="op161" [(ngModel)]="op11" onclick="event16(true,false,false,false,false)" >
+      <label style="color:white;"for="op11"><b>Strongly Agree</b></label>
+      <input  class="form-check-input" type="radio" name="q16" id="op162" value="op162" [(ngModel)]="op12" onclick="event16(false,true,false,false,false)" >
+      <label style="color:white;"for="op12"><b>Agree</b></label>
+      <input class="form-check-input" type="radio" name="q16" id="op163" value="op163" [(ngModel)]="op13" onclick="event16(false,false,true,false,false)" checked="checked">
+      <label style="color:white;"for="op13"><b>Neutral</b></label>
+      <input class="form-check-input" type="radio" name="q16" id="op164" value="op164" [(ngModel)]="op14" onclick="event16(false,false,false,true,false)" >
+      <label style="color:white;"for="op14"><b>Disagree</b></label>
+      <input class="form-check-input" type="radio" name="q16" id="op165" value="op165" [(ngModel)]="op15" onclick="event16(false,false,false,false,true)" >
+      <label style="color:white;"for="op15"><b>Strongly Disagree</b></label><br>
+      <br>
+      </div>
+      <br>
+      <br>
+
+      <button class="collapsible">Check Out Process</button> 
+      <div class="content4"> 
+      <p style="color:white;margin:30px;font-size:20px;">17)  &nbsp;&nbsp;My reservation record was accurate.</p>
+      <input style="margin-left: 30px;"class="form-check-input" type="radio" name="q17" id="op171" value="op171" [(ngModel)]="op11" onclick="event17(true,false,false,false,false)" >
+      <label style="color:white;"for="op11"><b>Strongly Agree</b></label>
+      <input  class="form-check-input" type="radio" name="q17" id="op172" value="op172" [(ngModel)]="op12" onclick="event17(false,true,false,false,false)" >
+      <label style="color:white;"for="op12"><b>Agree</b></label>
+      <input class="form-check-input" type="radio" name="q17" id="op173" value="op173" [(ngModel)]="op13" onclick="event17(false,false,true,false,false)" checked="checked">
+      <label style="color:white;"for="op13"><b>Neutral</b></label>
+      <input class="form-check-input" type="radio" name="q17" id="op174" value="op174" [(ngModel)]="op14" onclick="event17(false,false,false,true,false)" >
+      <label style="color:white;"for="op14"><b>Disagree</b></label>
+      <input class="form-check-input" type="radio" name="q17" id="op175" value="op175" [(ngModel)]="op15" onclick="event17(false,false,false,false,true)" >
+      <label style="color:white;"for="op15"><b>Strongly Disagree</b></label><br>
+      <br>
+
+      <p style="color:white;margin:30px;font-size:20px;">18)  &nbsp;&nbsp;Hotel amenities (pool, hot tub, exercise room) were clean, attractive, and properly equipped.</p>
+      <input style="margin-left: 30px;"class="form-check-input" type="radio" name="q18" id="op181" value="op181" [(ngModel)]="op11" onclick="event18(true,false,false,false,false)" >
+      <label style="color:white;"for="op11"><b>Strongly Agree</b></label>
+      <input  class="form-check-input" type="radio" name="q18" id="op182" value="op182" [(ngModel)]="op12" onclick="event18(false,true,false,false,false)" >
+      <label style="color:white;"for="op12"><b>Agree</b></label>
+      <input class="form-check-input" type="radio" name="q18" id="op183" value="op183" [(ngModel)]="op13" onclick="event18(false,false,true,false,false)" checked="checked">
+      <label style="color:white;"for="op13"><b>Neutral</b></label>
+      <input class="form-check-input" type="radio" name="q18" id="op184" value="op184" [(ngModel)]="op14" onclick="event18(false,false,false,true,false)" >
+      <label style="color:white;"for="op14"><b>Disagree</b></label>
+      <input class="form-check-input" type="radio" name="q18" id="op185" value="op185" [(ngModel)]="op15" onclick="event18(false,false,false,false,true)" >
+      <label style="color:white;"for="op15"><b>Strongly Disagree</b></label><br>
+      <br>
+
+      <p style="color:white;margin:30px;font-size:20px;">19)  &nbsp;&nbsp;The check-out process was timely and efficient.</p>
+      <input style="margin-left: 30px;"class="form-check-input" type="radio" name="q19" id="op191" value="op191" [(ngModel)]="op11" onclick="event19(true,false,false,false,false)" >
+      <label style="color:white;"for="op11"><b>Strongly Agree</b></label>
+      <input  class="form-check-input" type="radio" name="q19" id="op192" value="op192" [(ngModel)]="op12" onclick="event19(false,true,false,false,false)" >
+      <label style="color:white;"for="op12"><b>Agree</b></label>
+      <input class="form-check-input" type="radio" name="q19" id="op193" value="op193" [(ngModel)]="op13" onclick="event19(false,false,true,false,false)" checked="checked">
+      <label style="color:white;"for="op13"><b>Neutral</b></label>
+      <input class="form-check-input" type="radio" name="q19" id="op194" value="op194" [(ngModel)]="op14" onclick="event19(false,false,false,true,false)" >
+      <label style="color:white;"for="op14"><b>Disagree</b></label>
+      <input class="form-check-input" type="radio" name="q19" id="op195" value="op195" [(ngModel)]="op15" onclick="event19(false,false,false,false,true)" >
+      <label style="color:white;"for="op15"><b>Strongly Disagree</b></label><br>
+      <br>
+
+      <p style="color:white;margin:30px;font-size:20px;">20)  &nbsp;&nbsp;I received a complete and accurate bill.</p>
+      <input style="margin-left: 30px;"class="form-check-input" type="radio" name="q20" id="op201" value="op201" [(ngModel)]="op11" onclick="event20(true,false,false,false,false)" >
+      <label style="color:white;"for="op11"><b>Strongly Agree</b></label>
+      <input  class="form-check-input" type="radio" name="q20" id="op202" value="op202" [(ngModel)]="op12" onclick="event20(false,true,false,false,false)" >
+      <label style="color:white;"for="op12"><b>Agree</b></label>
+      <input class="form-check-input" type="radio" name="q20" id="op203" value="op203" [(ngModel)]="op13" onclick="event20(false,false,true,false,false)" checked="checked">
+      <label style="color:white;"for="op13"><b>Neutral</b></label>
+      <input class="form-check-input" type="radio" name="q20" id="op204" value="op204" [(ngModel)]="op14" onclick="event20(false,false,false,true,false)" >
+      <label style="color:white;"for="op14"><b>Disagree</b></label>
+      <input class="form-check-input" type="radio" name="q20" id="op205" value="op205" [(ngModel)]="op15" onclick="event20(false,false,false,false,true)" >
+      <label style="color:white;"for="op15"><b>Strongly Disagree</b></label><br>
+      <br>
+
+      <p style="color:white;margin:30px;font-size:20px;">21)  &nbsp;&nbsp;The check-out process was timely and efficient.</p>
+      <input style="margin-left: 30px;"class="form-check-input" type="radio" name="q21" id="op211" value="op211" [(ngModel)]="op11" onclick="event21(true,false,false,false,false)" >
+      <label style="color:white;"for="op11"><b>Strongly Agree</b></label>
+      <input  class="form-check-input" type="radio" name="q21" id="op212" value="op212" [(ngModel)]="op12" onclick="event21(false,true,false,false,false)" >
+      <label style="color:white;"for="op12"><b>Agree</b></label>
+      <input class="form-check-input" type="radio" name="q21" id="op213" value="op213" [(ngModel)]="op13" onclick="event21(false,false,true,false,false)" checked="checked">
+      <label style="color:white;"for="op13"><b>Neutral</b></label>
+      <input class="form-check-input" type="radio" name="q21" id="op214" value="op214" [(ngModel)]="op14" onclick="event21(false,false,false,true,false)" >
+      <label style="color:white;"for="op14"><b>Disagree</b></label>
+      <input class="form-check-input" type="radio" name="q21" id="op215" value="op215" [(ngModel)]="op15" onclick="event21(false,false,false,false,true)" >
+      <label style="color:white;"for="op15"><b>Strongly Disagree</b></label><br>
+      <br>
+
+      <label for="com" class="gg"><h3><b>Additional Comments:</b></h3></label>
+      <input type="text" 
+       
+       class="ccc"
+       style="width:25%;margin: 100px;"
+       text-align= "center"
+       name="com"
+       id="com"
+       class="form-control"
+      >
+
+      <!--<span id="cli" name="cli">CLI</span>-->
+      <input type="hidden" id="cli" name="cli">
+      <button class="btn btn-primary" onclick="inc()" >Submit</button><br>
+    </div>
+    <br>
+    <br>
+
+    </form>
+    </div>
+    </div>
+  </div>
+
+    <script type="text/javascript">
+      var score1=0;
+      var score2=0;
+      var score3=0;
+      var score4=0;
+      var score5=0;
+      var score6=0;
+      var score7=0;
+      var score8=0;
+      var score9=0;
+      var score10=0;
+      var score11=0;
+      var score12=0;
+      var score13=0;
+      var score14=0;
+      var score15=0;
+      var score16=0;
+      var score17=0;
+      var score18=0;
+      var score19=0;
+      var score20=0;
+      var score21=0;
+      var cli=0;
+      var count=0;
+      var warn="";
+
+      var n =  new Date();
+      var y = this.n.getFullYear();
+      var m = this.n.getMonth() + 1;
+      var d = this.n.getDate();
+      document.getElementById("date").innerHTML = "Date: "+ d + "/" + m + "/" + y;
+	  
+	  var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for(i=0;i<coll.length;i++) {
+        coll[i].addEventListener("click", function()
+        {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if(content.style.display==="block")
+          {
+            content.style.display="none";
+          }else{
+            content.style.display="block";
+          }
+        });
+      }
+		
+		function namevalidate() 
+		{
+			var name = document.forms["myform"]["name"].value;
+			if(name=="")
+			{
+				alert("Please enter the name");
+				return false;
+			}
+		}
+		
+		function emailvalidate()
+		{
+		      var email = document.forms["myform"]["email"].value;
+			if(email=="")
+			{
+				alert("Please enter the email");
+				return false;
+			}
+			else
+			{
+				var re='^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$';
+				var x=re.test(email);
+				if(x)
+				{
+				}
+				else
+				{
+					alert("Email id not in correct format");
+					return false;
+				} 
+			} 
+		}
+		
+		function mobileevalidate()
+		{
+			var mobile = document.forms["myform"]["ph"].value;
+			if(mobile=="")
+			{
+				alert("Please enter the mobile");
+				return false;
+			}
+			else
+			{
+			    var re='^[0][1-9]{1}[0-9]{9}$';
+				var x=re.test(mobile);
+				if(x)
+				{
+				}
+				else
+				{
+					alert("Invalid email");
+					return false;
+				} 
+			} 
+		}
+ 
+		function addressvalidate()
+		{
+			var address = document.forms["myform"]["add"].value;
+			if(address=="")
+			{
+				alert("Please enter the address");
+				return false;
+			}
+		}
+ 
+       function inc()
+      {
+	    
+        var name= document.getElementById('name').value
+        document.getElementById("cli").value=cli;
+        alert("Thank you "+name+" for the feedback");
+      }
+    
+      function event1(value1,value2,value3,value4,value5)
+      {
+        if(value1==true)
+        {
+          console.log("1");
+          this.score1=10;
+        }
+        if(value2==true)
+        {
+          console.log("2");
+          this.score1=8;
+        }
+        if(value3==true)
+        {
+          console.log("3");
+          this.score1=6;
+        }
+        if(value4==true)
+        {
+          console.log("4");
+          this.score1=4;
+        }
+        if(value5==true)
+        {
+          console.log("5");
+          this.score1=2;
+        }
+        this.cli=(this.score1+this.score2+this.score3+this.score4+this.score5+this.score6+this.score7+this.score8+this.score9+this.score10+this.score11+this.score12+this.score13+this.score14+this.score15+this.score16+this.score17+this.score18+this.score19+this.score20+this.score21)/21;
+        console.log("CLI"+cli);
+      }
+
+      function event2(value1,value2,value3,value4,value5)
+      {
+        if(value1==true)
+        {
+          console.log("1");
+          this.score2=10;
+        }
+        if(value2==true)
+        {
+          console.log("2");
+          this.score2=8;
+        }
+        if(value3==true)
+        {
+          console.log("3");
+          this.score2=6;
+        }
+        if(value4==true)
+        {
+          console.log("4");
+          this.score2=4;
+        }
+        if(value5==true)
+        {
+          console.log("5");
+          this.score2=2;
+        }
+        this.cli=(this.score1+this.score2+this.score3+this.score4+this.score5+this.score6+this.score7+this.score8+this.score9+this.score10+this.score11+this.score12+this.score13+this.score14+this.score15+this.score16+this.score17+this.score18+this.score19+this.score20+this.score21)/21;
+        console.log("CLI"+cli);
+      }
+    function event3(value1,value2,value3,value4,value5)
+      {
+        if(value1==true)
+        {
+          console.log("1");
+          this.score3=10;
+        }
+        if(value2==true)
+        {
+          console.log("2");
+          this.score3=8;
+        }
+        if(value3==true)
+        {
+          console.log("3");
+          this.score3=6;
+        }
+        if(value4==true)
+        {
+          console.log("4");
+          this.score3=4;
+        }
+        if(value5==true)
+        {
+          console.log("5");
+          this.score3=2;
+        }
+        this.cli=(this.score1+this.score2+this.score3+this.score4+this.score5+this.score6+this.score7+this.score8+this.score9+this.score10+this.score11+this.score12+this.score13+this.score14+this.score15+this.score16+this.score17+this.score18+this.score19+this.score20+this.score21)/21;
+        console.log("CLI"+cli);
+      }
+
+      function event4(value1,value2,value3,value4,value5)
+      {
+        if(value1==true)
+        {
+          console.log("1");
+          this.score4=10;
+        }
+        if(value2==true)
+        {
+          console.log("2");
+          this.score4=8;
+        }
+        if(value3==true)
+        {
+          console.log("3");
+          this.score4=6;
+        }
+        if(value4==true)
+        {
+          console.log("4");
+          this.score4=4;
+        }
+        if(value5==true)
+        {
+          console.log("5");
+          this.score4=2;
+        }
+        this.cli=(this.score1+this.score2+this.score3+this.score4+this.score5+this.score6+this.score7+this.score8+this.score9+this.score10+this.score11+this.score12+this.score13+this.score14+this.score15+this.score16+this.score17+this.score18+this.score19+this.score20+this.score21)/21;
+        console.log("CLI"+cli);
+      }
+
+      function event5(value1,value2,value3,value4,value5)
+      {
+        if(value1==true)
+        {
+          console.log("1");
+          this.score5=10;
+        }
+        if(value2==true)
+        {
+          console.log("2");
+          this.score5=8;
+        }
+        if(value3==true)
+        {
+          console.log("3");
+          this.score5=6;
+        }
+        if(value4==true)
+        {
+          console.log("4");
+          this.score5=4;
+        }
+        if(value5==true)
+        {
+          console.log("5");
+          this.score5=2;
+        }
+        this.cli=(this.score1+this.score2+this.score3+this.score4+this.score5+this.score6+this.score7+this.score8+this.score9+this.score10+this.score11+this.score12+this.score13+this.score14+this.score15+this.score16+this.score17+this.score18+this.score19+this.score20+this.score21)/21;
+        console.log("CLI"+cli);
+      }
+
+      function event6(value1,value2,value3,value4,value5)
+      {
+        if(value1==true)
+        {
+          console.log("1");
+          this.score6=10;
+        }
+        if(value2==true)
+        {
+          console.log("2");
+          this.score6=8;
+        }
+        if(value3==true)
+        {
+          console.log("3");
+          this.score6=6;
+        }
+        if(value4==true)
+        {
+          console.log("4");
+          this.score6=4;
+        }
+        if(value5==true)
+        {
+          console.log("5");
+          this.score6=2;
+        }
+        this.cli=(this.score1+this.score2+this.score3+this.score4+this.score5+this.score6+this.score7+this.score8+this.score9+this.score10+this.score11+this.score12+this.score13+this.score14+this.score15+this.score16+this.score17+this.score18+this.score19+this.score20+this.score21)/21;
+        console.log("CLI"+cli);
+      }
+
+      function event7(value1,value2,value3,value4,value5)
+      {
+        if(value1==true)
+        {
+          console.log("1");
+          this.score7=10;
+        }
+        if(value2==true)
+        {
+          console.log("2");
+          this.score7=8;
+        }
+        if(value3==true)
+        {
+          console.log("3");
+          this.score7=6;
+        }
+        if(value4==true)
+        {
+          console.log("4");
+          this.score7=4;
+        }
+        if(value5==true)
+        {
+          console.log("5");
+          this.score7=2;
+        }
+        this.cli=(this.score1+this.score2+this.score3+this.score4+this.score5+this.score6+this.score7+this.score8+this.score9+this.score10+this.score11+this.score12+this.score13+this.score14+this.score15+this.score16+this.score17+this.score18+this.score19+this.score20+this.score21)/21;
+        console.log("CLI"+cli);
+      }
+
+      function event8(value1,value2,value3,value4,value5)
+      {
+        if(value1==true)
+        {
+          console.log("1");
+          this.score8=10;
+        }
+        if(value2==true)
+        {
+          console.log("2");
+          this.score8=8;
+        }
+        if(value3==true)
+        {
+          console.log("3");
+          this.score8=6;
+        }
+        if(value4==true)
+        {
+          console.log("4");
+          this.score8=4;
+        }
+        if(value5==true)
+        {
+          console.log("5");
+          this.score8=2;
+        }
+        this.cli=(this.score1+this.score2+this.score3+this.score4+this.score5+this.score6+this.score7+this.score8+this.score9+this.score10+this.score11+this.score12+this.score13+this.score14+this.score15+this.score16+this.score17+this.score18+this.score19+this.score20+this.score21)/21;
+        console.log("CLI"+cli);
+      }
+
+      function event9(value1,value2,value3,value4,value5)
+      {
+        if(value1==true)
+        {
+          console.log("1");
+          this.score9=10;
+        }
+        if(value2==true)
+        {
+          console.log("2");
+          this.score9=8;
+        }
+        if(value3==true)
+        {
+          console.log("3");
+          this.score9=6;
+        }
+        if(value4==true)
+        {
+          console.log("4");
+          this.score9=4;
+        }
+        if(value5==true)
+        {
+          console.log("5");
+          this.score9=2;
+        }
+        this.cli=(this.score1+this.score2+this.score3+this.score4+this.score5+this.score6+this.score7+this.score8+this.score9+this.score10+this.score11+this.score12+this.score13+this.score14+this.score15+this.score16+this.score17+this.score18+this.score19+this.score20+this.score21)/21;
+        console.log("CLI"+cli);
+      }
+
+      function event10(value1,value2,value3,value4,value5)
+      {
+        if(value1==true)
+        {
+          console.log("1");
+          this.score10=10;
+        }
+        if(value2==true)
+        {
+          console.log("2");
+          this.score10=8;
+        }
+        if(value3==true)
+        {
+          console.log("3");
+          this.score10=6;
+        }
+        if(value4==true)
+        {
+          console.log("4");
+          this.score10=4;
+        }
+        if(value5==true)
+        {
+          console.log("5");
+          this.score10=2;
+        }
+        this.cli=(this.score1+this.score2+this.score3+this.score4+this.score5+this.score6+this.score7+this.score8+this.score9+this.score10+this.score11+this.score12+this.score13+this.score14+this.score15+this.score16+this.score17+this.score18+this.score19+this.score20+this.score21)/21;
+        console.log("CLI"+cli);
+      }
+
+      function event11(value1,value2,value3,value4,value5)
+      {
+        if(value1==true)
+        {
+          console.log("1");
+          this.score11=10;
+        }
+        if(value2==true)
+        {
+          console.log("2");
+          this.score11=8;
+        }
+        if(value3==true)
+        {
+          console.log("3");
+          this.score11=6;
+        }
+        if(value4==true)
+        {
+          console.log("4");
+          this.score11=4;
+        }
+        if(value5==true)
+        {
+          console.log("5");
+          this.score11=2;
+        }
+        this.cli=(this.score1+this.score2+this.score3+this.score4+this.score5+this.score6+this.score7+this.score8+this.score9+this.score10+this.score11+this.score12+this.score13+this.score14+this.score15+this.score16+this.score17+this.score18+this.score19+this.score20+this.score21)/21;
+        console.log("CLI"+cli);
+      }
+
+      function event12(value1,value2,value3,value4,value5)
+      {
+        if(value1==true)
+        {
+          console.log("1");
+          this.score12=10;
+        }
+        if(value2==true)
+        {
+          console.log("2");
+          this.score12=8;
+        }
+        if(value3==true)
+        {
+          console.log("3");
+          this.score12=6;
+        }
+        if(value4==true)
+        {
+          console.log("4");
+          this.score12=4;
+        }
+        if(value5==true)
+        {
+          console.log("5");
+          this.score12=2;
+        }
+        this.cli=(this.score1+this.score2+this.score3+this.score4+this.score5+this.score6+this.score7+this.score8+this.score9+this.score10+this.score11+this.score12+this.score13+this.score14+this.score15+this.score16+this.score17+this.score18+this.score19+this.score20+this.score21)/21;
+        console.log("CLI"+cli);
+      }
+
+      function event13(value1,value2,value3,value4,value5)
+      {
+        if(value1==true)
+        {
+          console.log("1");
+          this.score13=10;
+        }
+        if(value2==true)
+        {
+          console.log("2");
+          this.score13=8;
+        }
+        if(value3==true)
+        {
+          console.log("3");
+          this.score13=6;
+        }
+        if(value4==true)
+        {
+          console.log("4");
+          this.score13=4;
+        }
+        if(value5==true)
+        {
+          console.log("5");
+          this.score13=2;
+        }
+        this.cli=(this.score1+this.score2+this.score3+this.score4+this.score5+this.score6+this.score7+this.score8+this.score9+this.score10+this.score11+this.score12+this.score13+this.score14+this.score15+this.score16+this.score17+this.score18+this.score19+this.score20+this.score21)/21;
+        console.log("CLI"+cli);
+      }
+
+      function event14(value1,value2,value3,value4,value5)
+      {
+        if(value1==true)
+        {
+          console.log("1");
+          this.score14=10;
+        }
+        if(value2==true)
+        {
+          console.log("2");
+          this.score14=8;
+        }
+        if(value3==true)
+        {
+          console.log("3");
+          this.score14=6;
+        }
+        if(value4==true)
+        {
+          console.log("4");
+          this.score14=4;
+        }
+        if(value5==true)
+        {
+          console.log("5");
+          this.score14=2;
+        }
+        this.cli=(this.score1+this.score2+this.score3+this.score4+this.score5+this.score6+this.score7+this.score8+this.score9+this.score10+this.score11+this.score12+this.score13+this.score14+this.score15+this.score16+this.score17+this.score18+this.score19+this.score20+this.score21)/21;
+        console.log("CLI"+cli);
+      }
+
+      function event15(value1,value2,value3,value4,value5)
+      {
+        if(value1==true)
+        {
+          console.log("1");
+          this.score15=10;
+        }
+        if(value2==true)
+        {
+          console.log("2");
+          this.score15=8;
+        }
+        if(value3==true)
+        {
+          console.log("3");
+          this.score15=6;
+        }
+        if(value4==true)
+        {
+          console.log("4");
+          this.score15=4;
+        }
+        if(value5==true)
+        {
+          console.log("5");
+          this.score15=2;
+        }
+        this.cli=(this.score1+this.score2+this.score3+this.score4+this.score5+this.score6+this.score7+this.score8+this.score9+this.score10+this.score11+this.score12+this.score13+this.score14+this.score15+this.score16+this.score17+this.score18+this.score19+this.score20+this.score21)/21;
+        console.log("CLI"+cli);
+      }
+
+      function event16(value1,value2,value3,value4,value5)
+      {
+        if(value1==true)
+        {
+          console.log("1");
+          this.score16=10;
+        }
+        if(value2==true)
+        {
+          console.log("2");
+          this.score16=8;
+        }
+        if(value3==true)
+        {
+          console.log("3");
+          this.score16=6;
+        }
+        if(value4==true)
+        {
+          console.log("4");
+          this.score16=4;
+        }
+        if(value5==true)
+        {
+          console.log("5");
+          this.score16=2;
+        }
+        this.cli=(this.score1+this.score2+this.score3+this.score4+this.score5+this.score6+this.score7+this.score8+this.score9+this.score10+this.score11+this.score12+this.score13+this.score14+this.score15+this.score16+this.score17+this.score18+this.score19+this.score20+this.score21)/21;
+        console.log("CLI"+cli);
+      }
+
+      function event17(value1,value2,value3,value4,value5)
+      {
+        if(value1==true)
+        {
+          console.log("1");
+          this.score17=10;
+        }
+        if(value2==true)
+        {
+          console.log("2");
+          this.score17=8;
+        }
+        if(value3==true)
+        {
+          console.log("3");
+          this.score17=6;
+        }
+        if(value4==true)
+        {
+          console.log("4");
+          this.score17=4;
+        }
+        if(value5==true)
+        {
+          console.log("5");
+          this.score17=2;
+        }
+        this.cli=(this.score1+this.score2+this.score3+this.score4+this.score5+this.score6+this.score7+this.score8+this.score9+this.score10+this.score11+this.score12+this.score13+this.score14+this.score15+this.score16+this.score17+this.score18+this.score19+this.score20+this.score21)/21;
+        console.log("CLI"+cli);
+      }
+
+      function event18(value1,value2,value3,value4,value5)
+      {
+        if(value1==true)
+        {
+          console.log("1");
+          this.score18=10;
+        }
+        if(value2==true)
+        {
+          console.log("2");
+          this.score18=8;
+        }
+        if(value3==true)
+        {
+          console.log("3");
+          this.score18=6;
+        }
+        if(value4==true)
+        {
+          console.log("4");
+          this.score18=4;
+        }
+        if(value5==true)
+        {
+          console.log("5");
+          this.score18=2;
+        }
+        this.cli=(this.score1+this.score2+this.score3+this.score4+this.score5+this.score6+this.score7+this.score8+this.score9+this.score10+this.score11+this.score12+this.score13+this.score14+this.score15+this.score16+this.score17+this.score18+this.score19+this.score20+this.score21)/21;
+        console.log("CLI"+cli);
+      }
+
+      function event19(value1,value2,value3,value4,value5)
+      {
+        if(value1==true)
+        {
+          console.log("1");
+          this.score19=10;
+        }
+        if(value2==true)
+        {
+          console.log("2");
+          this.score19=8;
+        }
+        if(value3==true)
+        {
+          console.log("3");
+          this.score19=6;
+        }
+        if(value4==true)
+        {
+          console.log("4");
+          this.score19=4;
+        }
+        if(value5==true)
+        {
+          console.log("5");
+          this.score19=2;
+        }
+        this.cli=(this.score1+this.score2+this.score3+this.score4+this.score5+this.score6+this.score7+this.score8+this.score9+this.score10+this.score11+this.score12+this.score13+this.score14+this.score15+this.score16+this.score17+this.score18+this.score19+this.score20+this.score21)/21;
+        console.log("CLI"+cli);
+      }
+
+      function event20(value1,value2,value3,value4,value5)
+      {
+        if(value1==true)
+        {
+          console.log("1");
+          this.score20=10;
+        }
+        if(value2==true)
+        {
+          console.log("2");
+          this.score20=8;
+        }
+        if(value3==true)
+        {
+          console.log("3");
+          this.score20=6;
+        }
+        if(value4==true)
+        {
+          console.log("4");
+          this.score20=4;
+        }
+        if(value5==true)
+        {
+          console.log("5");
+          this.score20=2;
+        }
+        this.cli=(this.score1+this.score2+this.score3+this.score4+this.score5+this.score6+this.score7+this.score8+this.score9+this.score10+this.score11+this.score12+this.score13+this.score14+this.score15+this.score16+this.score17+this.score18+this.score19+this.score20+this.score21)/21;
+        console.log("CLI"+cli);
+      }
+
+      function event21(value1,value2,value3,value4,value5)
+      {
+        if(value1==true)
+        {
+          console.log("1");
+          this.score21=10;
+        }
+        if(value2==true)
+        {
+          console.log("2");
+          this.score21=8;
+        }
+        if(value3==true)
+        {
+          console.log("3");
+          this.score21=6;
+        }
+        if(value4==true)
+        {
+          console.log("4");
+          this.score21=4;
+        }
+        if(value5==true)
+        {
+          console.log("5");
+          this.score21=2;
+        }
+        this.cli=(this.score1+this.score2+this.score3+this.score4+this.score5+this.score6+this.score7+this.score8+this.score9+this.score10+this.score11+this.score12+this.score13+this.score14+this.score15+this.score16+this.score17+this.score18+this.score19+this.score20+this.score21)/21;
+        console.log(score1+score2+score3+score4+score5+score6+score7+score8+score9+score10+score11+score12+score13+score14+score15+score16+score17+score18+score19+score20+score21+"CLI"+cli);
+      }
+
+       
+  </script>

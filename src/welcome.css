@@ -1,0 +1,60 @@
+.image
+{
+    background-image: url(hotel1.jpg);
+    background-size:cover;
+    background-position: center;
+    height: 600px;
+}
+.navi
+{
+    background-color:navy;
+    color:white;
+    font-size: 25px;
+    padding: 5px;
+    border :1px  navy;  
+    margin-right: 55px;
+    
+    
+    
+}
+
+.navi1
+{
+    background-color:rgb(14, 128, 57);
+    color:white;
+    font-size: 25px;
+    padding: 4px;
+    border :1px  blueviolet;  
+    margin-right: 50px;
+    width:180px;
+    
+    
+}
+
+.navi:hover{
+    
+    background-color: gold;
+}
+
+.navi1:hover{
+    
+    background-color: gold;
+}
+
+.btn:hover{
+    color: pink;
+}
+
+.navi:hover{
+    
+    background-color: gold;
+}
+
+.id
+{
+    font-size: 35px;
+    color:black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+    
+}

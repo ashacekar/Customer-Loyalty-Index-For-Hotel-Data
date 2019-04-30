@@ -1,0 +1,118 @@
+.image
+{
+    background-image: linear-gradient(rgba(77, 76, 76, 0.5),rgba(87, 85, 85, 0.5)), url(hotel2.jpg);
+    background-size:cover;
+    background-position: center;
+    height: 700px;
+}
+
+.gg1
+{
+    font-family: cursive;
+    color:white;
+    text-align: center;
+    margin-left: 100px;
+}
+.gg
+{
+    font-size: 22px;
+    font-family: cursive;
+    color:white;
+    text-align: center;
+    margin-left: 100px;
+}
+#uname
+{
+    height: 30px;
+    width:500px;
+    margin-left: 100px;
+    border-color:yellow;
+    border:2px;
+  
+}
+
+.collapsible {
+    background-color:aqua;
+    color: navy;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active, .collapsible:hover {
+    background-color: black;
+    color: white;
+}
+
+.collapsible:after {
+    content: '\02795';
+    font-size: 13px;
+    color: navy;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796";
+    color: white;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: black;
+    background-image: linear-gradient(rgba(77, 76, 76, 0.5),rgba(87, 85, 85, 0.5)), url(c1.jpg);
+    background-size:cover;
+    background-position: center;
+    transition: max-height 0.2s ease-out;
+}
+
+.content1 {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: black;
+    background-image: linear-gradient(rgba(77, 76, 76, 0.5),rgba(87, 85, 85, 0.5)), url(c2.jpg);
+    background-size:cover;
+    background-position: center;
+    transition: max-height 0.2s ease-out;
+}
+
+.content2 {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: black;
+    background-image: linear-gradient(rgba(77, 76, 76, 0.5),rgba(87, 85, 85, 0.5)), url(c3.jpg);
+    background-size:cover;
+    background-position: center;
+    transition: max-height 0.2s ease-out;
+}
+
+.content3 {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: black;
+    background-image: linear-gradient(rgba(77, 76, 76, 0.5),rgba(87, 85, 85, 0.5)), url(c4.jpg);
+    background-size:cover;
+    background-position: center;
+    transition: max-height 0.2s ease-out;
+}
+
+.content4 {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: black;
+    background-image: linear-gradient(rgba(77, 76, 76, 0.5),rgba(87, 85, 85, 0.5)), url(c5.jpg);
+    background-size:cover;
+    background-position: center;
+    transition: max-height 0.2s ease-out;
+}
+

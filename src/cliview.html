@@ -1,0 +1,49 @@
+<html>
+    <link rel="stylesheet"
+    href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="cliview.css">
+    <div class="image">
+
+  <div>
+      <body class="body">
+    <form method='post' action='fetch' name="cliview">
+            <br>
+      <h1 class="gg1"><marquee>Hotel paradise</marquee></h1>
+    <h2 class="gg1" style="color:navy;"> Welcome Admin </h2><br>
+    <h2 class="gg1"> Please enter CLI to view most loyal customers above that CLI: </h2>
+      
+
+      <label class="gg"><b style="color:navy;">Enter Cli:</b></label>
+      <input type="number" 
+      required 
+      style="width:25%;border-radius: 4px;border:black;padding: 8px;"
+      name="gcli"
+      id="gcli"
+      >
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+      <button style="margin-left: 50px;" class="navi"  onclick="return inc()">Submit</button>
+
+    </form>
+    </div>
+    </div>
+  </div>
+  </body>
+    <script>
+    function inc(){
+      var cli = document.forms["cliview"]["gcli"];
+      if (cli.value == ""|| cli.value<0 || cli.value>9)                                  
+      { 
+        alert("Invalid CLI. Range(0-9)"); 
+        cli.focus();
+        return false; 
+      } 
+      return true;
+    }
+            //-->
+          </script>
+		  
