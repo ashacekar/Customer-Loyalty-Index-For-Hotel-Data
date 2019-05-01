@@ -9,6 +9,13 @@ Software Requirements:
 2. MongoDB
 3. Node.js
 
+Pre-Requisites:
+Install following libraries by npm command for the project:
+npm install express
+npm install body-parser
+npm install mongodb
+npm install mongoose
+
 Features:
 1. Hotel customers can give feedback for the services and accomodation provided by the hotel
 2. Based on customer feedback, cli will be computed for that customer
