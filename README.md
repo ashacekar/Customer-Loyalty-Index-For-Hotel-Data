@@ -9,12 +9,16 @@ Software Requirements:
 2. MongoDB
 3. Node.js
 
+Clone and download this project folder.
+
 Pre-Requisites:
 Install following libraries by npm command for the project:
-npm install express
-npm install body-parser
-npm install mongodb
-npm install mongoose
+1. npm install express
+2. npm install body-parser
+3. npm install mongodb
+4. npm install mongoose
+
+Ensure these installations create a "node_modules" directory in project folder
 
 Features:
 1. Hotel customers can give feedback for the services and accomodation provided by the hotel
