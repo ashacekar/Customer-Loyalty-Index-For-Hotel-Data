@@ -1,5 +1,19 @@
 # Customer-Loyalty-Index-For-Hotel-Data
-This is a MEAN stack project developed in web technology course by students of KLE Technological University,Hubbali
+This is a MEAN stack project developed in web technology course by students of KLE Technological University,Hubbali for following Transil Technologies Pvt. Ltd Problem Statement:
+TSL-17.0 
+Customer Loyalty Index Businesses often have methodologies to reward 
+users for being their customers or using their 
+products for a long time. Suppose you are an 
+administrator of a business. Develop a customer 
+loyalty index to reward these customers. 
+Create a basic UI where you can input the criteria to 
+determine loyalty.
+Give an option to input different conditions and 
+criteria and generate loyalty ranks accordingly.
+Display the loyalty ranked customers in a tabular 
+format.
+Consider a hotel segment to populate data. 
+
 Contributors:
 Ashish Kar, Arundati Dixit, Deepali Naik and Deepti Nadkarni
 3rd Year, 6th Sem, SoCSE
