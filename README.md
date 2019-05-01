@@ -1,5 +1,6 @@
 # Customer-Loyalty-Index-For-Hotel-Data
 This is a MEAN stack project developed in web technology course by students of KLE Technological University,Hubbali for following Transil Technologies Pvt. Ltd Problem Statement:
+
 TSL-17.0 
 Customer Loyalty Index Businesses often have methodologies to reward 
 users for being their customers or using their 
