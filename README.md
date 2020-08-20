@@ -46,6 +46,8 @@ General instructions:
 3. Run the following command in terminal:
    node server.js
    Go to http://localhost:9000 on browser
+   Admin username: admin
+   Admin password: admin
 4. Page instructions:
    4.1 welcome.html: Choose whether to go to admin or feedback page
    4.2 feedback.html: Customers can provide feedback for various facilities provides by hotel
