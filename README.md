@@ -42,6 +42,7 @@ Features:
 
 General instructions:
 1. Start your MongoDB Server
+   And use following command on MongoDB terminal: db.createCollection("wt1") (Only for first time)
 2. Open the project folder in Visual Studio Code and go to src directory
 3. Run the following command in terminal:
    node server.js
